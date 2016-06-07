@@ -3,3 +3,7 @@ C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogat
 C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\obj\Debug\ProjetoSurrogateDAO.csprojResolveAssemblyReference.cache
 C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\obj\Debug\ProjetoSurrogateDAO.dll
 C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\obj\Debug\ProjetoSurrogateDAO.pdb
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.dll
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Data.xml
