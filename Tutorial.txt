@@ -1,0 +1,66 @@
+
+Projeto Surrogate - Passo a passo de uma projeto WEB
+
+* Primeiramente iniciar uma Soluçao vazia no VS: File - New - Project - Other Project Types - Visual Studio Solutions
+* Criar uma Class Library C# como o nome do Projeto concatenado com "BLL" - "ProjetoSurrogateBLL" - Area de comunicaçao entre WEB e DAO
+* Criar uma Class Library C# como o nome do Projeto concatenado com "MODEL" - "ProjetoSurrogateMODEL" - Area onde serao criadas as Classes do backend
+* Criar uma Class Library C# como o nome do Projeto concatenado com "DAO" - "ProjetoSurrogateDAO" - Area de Comunicaçao com o Banco de dados
+* Criar um projeto WEB MVC (empty e com web api) como o nome do Projeto concatenado com "WEB" - "ProjetoSurrogateWEB" - Estrutura WEB MVC
+
+No projeto WEB
+* Instalar o WEB OPTIMIZATION - "Install-Package Microsoft.AspNet.Web.Optimization"
+* Adicionar no web.config da pasta Views na tag <namespaces> - "<add namespace="System.Web.Optimization" />"
+* Instalar Install-Package Microsoft.AspNet.Cors e Install-Package Microsoft.AspNet.WebApi.Cors - Liberar acesso de outras aplicaçoes
+* Verificar se existe esse metodo no Global.asax - "GlobalConfiguration.Configure(WebApiConfig.Register);"
+
+---------------------------------------------------------------------------------------------------
+------------------Tira teima-----------------------------------------------------------------------
+-----WebApiConfig - rotas do web api----
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Http;
+using System.Web.Http.Cors;
+
+namespace ProjetoSurrogateWEB.App_Start
+{
+    public static class WebApiConfig
+    {
+        public static void Register(HttpConfiguration config)
+        {
+            // Libera acesso de outras aplicaçoes
+                config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
+
+            // Web API routes
+            config.MapHttpAttributeRoutes();
+            config.Routes.MapHttpRoute(
+                name: "WithActionApi",
+                routeTemplate: "api/{controller}/{action}/{_codigo}",
+                defaults: new { _codigo = RouteParameter.Optional }
+            );
+            config.Routes.MapHttpRoute(
+                name: "DefaultApi",
+                routeTemplate: "api/{controller}/{_codigo}",
+                defaults: new { _codigo = RouteParameter.Optional }
+            );
+            // WebAPI when dealing with JSON & JavaScript!
+            // Setup json serialization to serialize classes to camel (std. Json format)
+            var formatter = GlobalConfiguration.Configuration.Formatters.JsonFormatter;
+            formatter.SerializerSettings.ContractResolver =
+                new Newtonsoft.Json.Serialization.CamelCasePropertyNamesContractResolver();
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+* Instalar o boostrap - Install-Package Twitter.Bootstrap
+* Instalar o JQuery - Install-Package jQuery
+
+
+Na Library DAO
+
+* Instalar o Enterprise Library - Install-Package EnterpriseLibrary.Data - Bibliotecas para comunicaçao com BD
+

@@ -1,0 +1,5 @@
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateBLL\bin\Debug\ProjetoSurrogateBLL.dll
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateBLL\bin\Debug\ProjetoSurrogateBLL.pdb
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateBLL\obj\Debug\ProjetoSurrogateBLL.csprojResolveAssemblyReference.cache
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateBLL\obj\Debug\ProjetoSurrogateBLL.dll
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateBLL\obj\Debug\ProjetoSurrogateBLL.pdb

@@ -1,0 +1,5 @@
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\bin\Debug\ProjetoSurrogateDAO.dll
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\bin\Debug\ProjetoSurrogateDAO.pdb
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\obj\Debug\ProjetoSurrogateDAO.csprojResolveAssemblyReference.cache
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\obj\Debug\ProjetoSurrogateDAO.dll
+C:\Users\Hans\Documents\GitHub\ProjetoSurrogate\ProjetoSurrogate\ProjetoSurrogateDAO\obj\Debug\ProjetoSurrogateDAO.pdb
