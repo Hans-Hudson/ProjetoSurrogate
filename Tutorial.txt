@@ -59,7 +59,86 @@ namespace ProjetoSurrogateWEB.App_Start
 * Instalar o boostrap - Install-Package Twitter.Bootstrap
 * Instalar o JQuery - Install-Package jQuery
 
+---------------------------------------------------------------------------------------------------
+Bootstrap, tema, Javascript e Bundle
 
+BOOSTRAP E TEMA
+
+Com o boostrap instalado as classes css nativas do boostrap ja estao disponiveis, caso seja
+desejado é possivel alterar o tema da aparencia do bootstrap. O site mais comum para selecionar
+um tema a escolha é o Bootswatch.
+
+Apos acessar o site e eleger o tema desejado basta baixar o arquivo css do tema elegido e
+substituir o arquivo de mesmo nome na pasta "Content" do projeto web
+
+Nota: Exitem dois tipos de arquivos, "bootstrap.min.css e bootstrap.css" ambos possuem o mesmo
+conteudo sendo que um numa forma reduzida ".min" que é o que recomendamos baixar e usar. Os 
+arquivos ".min.map"  tambem devem ser mantidos
+
+Na pasta "Content" haverao arquivos "bootstrap-theme" que podem ser excluidos do projeto. esses 
+arquivos se referem a temas que podem ser comprados no site getbootstrap.
+
+O arquivo bootstrap pode ser alterado para ajustes, porem, aconselha-se que o mantenha original
+e que os ajuste segam aplicados em outros arquivos a exemplo o "Site.css" que é gerado no processo
+de criaçao do ambiente. Para isso ao criar a primeira view aconselha-se que deixe selecionado o 
+campo "Use layout page". Sera entao criada uma pasta chamada "Shared" contendo um view chamada
+"_layout" abra o arquivo e no header mova a tag para o arquivo "Site.css" para baixo da tag
+para o arquivo "Bootstrap.min". Dessa forma os ajustes realizados no "Site.css" irao
+sobrescrever os do "Bootstrap.min".
+
+JAVASCRIPT
+
+Na pasta "scripts" do projeto fazer o mesmo que da pasta "Content" deixar apenas os arquivos ".min e .min.map"
+
+BUNDLE
+
+Em termo simples o bundle agrupa os arquivos css em apenas um arquivo compactado o que otimiza
+a aplicaçao web, faz o mesmo com os arquivos JS (JavaScript). Este recurso é derivado do Web.Optimization
+criando o bundle:
+
+Na pasta app_start do projeto web deve-se criar uma nova classe chamada BundleConfig conforme abaixo
+
+---------------------------------------------------------------------------------------------------
+------------------Tira teima-----------------------------------------------------------------------
+-----Bundle
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Optimization;
+
+namespace ProjetoSurrogateWEB.App_Start
+{
+    public class BundleConfig
+    {
+        public static void RegisterBundles(BundleCollection bundles)
+        {
+            bundles.Add(new StyleBundle("~/css/cssBundle").Include(
+                "~/Content/bootstrap.css",
+                "~/Content/bootstrap-select.min.css",
+                "~/Content/Site.css"
+            ));
+
+            bundles.Add(new ScriptBundle("~/jsBundle").Include(
+                "~/Scripts/bootstrap.min.js",
+                "~/Scripts/jquery-2.2.3.min.js",
+                "~/Scripts/modernizr-2.6.2.js"
+            ));
+
+            // TODO: mudar isso para true antes de implantar em produção
+            BundleTable.EnableOptimizations = true;
+        }
+    }
+}
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------
 Na Library DAO
 
 * Instalar o Enterprise Library - Install-Package EnterpriseLibrary.Data - Bibliotecas para comunicaçao com BD
